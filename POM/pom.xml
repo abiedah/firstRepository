@@ -129,7 +129,7 @@
           <configuration>
           <reportsDirectory>${project.build.directory}/surefire-reports-${maven.build.timestamp}</reportsDirectory>
           <suiteXmlFiles>
-            <suiteXmlFile>screenshots.xml</suiteXmlFile>
+            <suiteXmlFile>listeners.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

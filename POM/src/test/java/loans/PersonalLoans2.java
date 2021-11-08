@@ -12,10 +12,12 @@ import frameWorkClasses.ReadExcel;
 public class PersonalLoans2 {
 	
 	@Test
-	public void flexible_repayments() {System.out.println("flexible repayments"); }
+	public void flexible_repayments() throws InterruptedException {System.out.println("flexible repayments"); 
+	Thread.sleep(1000);}
 
 	@Test
-	public void interest_rate() {System.out.println("interest rate"); }
+	public void interest_rate() throws InterruptedException {System.out.println("interest rate"); 
+	Thread.sleep(1000);}
 	
 	@BeforeSuite
 	public void GlobalVariables() {System.out.println("Set global vars before we start"); }

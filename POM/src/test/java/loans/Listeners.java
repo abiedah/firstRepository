@@ -4,7 +4,12 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import frameWorkClasses.Utilities;
+
 public class Listeners implements ITestListener {
+	
+	Utilities uts = new Utilities();
+
 
 	@Override
 	public void onTestStart(ITestResult result) { System.out.println("Listener on start test " + result.getName());
@@ -14,6 +19,11 @@ public class Listeners implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {System.out.println("Success in listener " + result.getName());
+	try {
+		uts.takeSnapShot("On test success" + uts.timereturn() + ".png");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
 		// TODO Auto-generated method stub
 //		ITestListener.super.onTestSuccess(result);
 	}

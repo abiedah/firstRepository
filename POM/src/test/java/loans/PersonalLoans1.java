@@ -8,11 +8,14 @@ import org.testng.annotations.Test;
 
 public class PersonalLoans1 {
 	
-	@Test
-	public void provisional() {System.out.println("provisional"); }
 	
 	@Test
-	public void approvalPL() {System.out.println("approvalPL");
+	public void provisional() throws InterruptedException {System.out.println("provisional"); 
+	Thread.sleep(1000);} 
+	
+	@Test
+	public void approvalPL() throws InterruptedException {System.out.println("approvalPL");
+	Thread.sleep(1000);
 	
 //	String expected = "Test failed";
 //	String actual = "not working";
