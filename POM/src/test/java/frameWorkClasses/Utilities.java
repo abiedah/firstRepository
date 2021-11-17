@@ -19,8 +19,7 @@ public class Utilities extends BasePage{
 	public void takeSnapShot(String fileWithPath) throws Exception{
 
         //Convert web driver object to TakeScreenshot
-
-        TakesScreenshot scrShot =((TakesScreenshot)driver);
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
 
         //Call getScreenshotAs method to create image file
         File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -124,7 +125,8 @@ public class BasePage {
 	
 	//Clean up (close the browser)
 	public void cleanup() {
-		driver.close();
+//		driver.close();
+		driver.quit();
 	}
 	
 	//Create a method to enter Text
@@ -140,7 +142,17 @@ public class BasePage {
 		//Populates the Drop down
 		sDrpDown.selectByVisibleText(pValue);
 	}
+	
+	public void clearBrowserCache() {
+		driver.manage().getCookies();
+		driver.manage().deleteAllCookies();
 		
+	}
+	
+	
 	
 
+
+	
+	
 }
